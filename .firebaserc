@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "hosting-react-with-firebase"
+    "default": "hosting-react-with-firebase",
+    "hosting-react-with-firebase": "allmeno2-ec0c9"
   }
 }
