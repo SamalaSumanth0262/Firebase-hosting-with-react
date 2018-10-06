@@ -1,6 +1,7 @@
 import React from 'react';
 import Particles from "react-particles-js";
 import '../styles/custom-style.css';
+import SearchBar from "./SearchBar";
 class ParticleContainer extends React.Component{
   render(){
     return(
@@ -58,6 +59,7 @@ class ParticleContainer extends React.Component{
             },
             retina_detect: true
           }}/>
+        <SearchBar/>
         </div>
     );
   }

@@ -3,7 +3,7 @@ import AsyncSelect from 'react-select/lib/Async';
 import { components } from 'react-select';
 import axios from 'axios';
 import SearchOption from './SearchOption';
-import TableSection from "./TableSection";
+import {store} from "../index"
 class SearchBar extends React.Component{
   constructor(props){
     super(props);
@@ -15,6 +15,9 @@ class SearchBar extends React.Component{
   handleOnChange = (value) =>{
    this.setState({data: value})
     console.log("the data is",this.state.data);
+  }
+  handlechutiya = () => {
+    store.dispatch({type: "INCREMENT"})
   }
   render(){
     const getOptions = (input) =>{
@@ -62,10 +65,11 @@ class SearchBar extends React.Component{
                 }}
               />
             </div>
-        <TableSection data={this.state.data}/>
+        <button onClick={this.handlechutiya}>sumanth please click here.</button>
       </div>
 
     );
   }
 }
+
 export default SearchBar;

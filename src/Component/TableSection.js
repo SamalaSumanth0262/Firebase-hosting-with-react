@@ -1,17 +1,15 @@
 import React from 'react';
-
+import { connect } from 'react-redux'
 
 class TableSection extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-      subtotal: 0
-    }
   }
   render(){
     console.log("im in table section:"+this.props.data);
     return(
-      <table className="table table-hover" style={{marginTop:"15rem"}}>
+
+      <table className="table table-hover">
         <thead className="table-head">
         <tr>
           <th scope="col">S.no</th>
@@ -23,22 +21,30 @@ class TableSection extends React.Component{
         </tr>
         </thead>
         <tbody>
-        {this.props.data.map(function(item,key){
-          return(
-            <tr key={key}>
-              <td>{key+1}</td>
-              <td>{item.hotel_name}</td>
-              <td>{item.label}</td>
-              <td>{item.price}</td>
-              <td><input type="number" /></td>
-              <td>{this.state.subtotal}</td>
-            </tr>
-          )
-        })}
+        {/*{this.props.data.map(function(item,key){*/}
+          {/*return(*/}
+            {/*<tr key={key}>*/}
+              {/*<td>{key+1}</td>*/}
+              {/*<td>{item.hotel_name}</td>*/}
+              {/*<td>{item.label}</td>*/}
+              {/*<td>{item.price}</td>*/}
+              {/*<td><input type="number" /></td>*/}
+              {/*<td>0</td>*/}
+            {/*</tr>*/}
+          {/*)*/}
+        {/*})}*/}
         </tbody>
+        <div>
+          this is number {this.props.number}
+        </div>
       </table>
+
     );
   }
 }
-
-export default TableSection;
+const mapStateToProps = (state) => {
+  return{
+    number:state.number
+  }
+}
+export default connect(mapStateToProps)(TableSection);
