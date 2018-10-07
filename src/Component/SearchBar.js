@@ -3,9 +3,7 @@ import AsyncSelect from 'react-select/lib/Async';
 import { components } from 'react-select';
 import axios from 'axios';
 import SearchOption from './SearchOption';
-import {store} from "../index"
-import $ from 'jquery'
-
+import {store} from "../index";
 class SearchBar extends React.Component{
   // const $ = require('jquery');
   constructor(props){

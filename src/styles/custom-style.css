@@ -5,6 +5,9 @@
     margin-top:17rem;
   }
 }
+body{
+  background-color: #fed136;
+}
 .searchbar-heading
 {
   color:#fed136;
@@ -72,5 +75,34 @@ blink {
   }
   100%{
     color:black
+  }
+}
+.promotion-banner{
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  color:#fed136;
+  background-color: black;
+  line-height:40px;
+}
+.promotion-banner-text {
+  animation: blinker2 1.5s linear infinite;
+}
+@keyframes blinker2 {
+  20% {
+    opacity: 0;
+    font-size:12px;
+
+  }
+  50%{
+    color: white;
+  }
+  80%{
+    color:orangered;
+  }
+  100%{
+    color: #fed136;
+    font-size: 19px;
   }
 }

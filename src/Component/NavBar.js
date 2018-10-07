@@ -4,7 +4,7 @@ class NavBar extends React.Component{
   render(){
     return(
       <div className="navbar-background">
-          <nav className="navbar navbar-expand-lg">
+          <nav className="navbar sticky-top navbar-expand-lg">
               <a className="navbar-brand allmeno-color"  href="#">AllMeno</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style={{color:"#fed136"}}>
