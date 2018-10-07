@@ -4,17 +4,19 @@ import { components } from 'react-select';
 import axios from 'axios';
 import SearchOption from './SearchOption';
 import {store} from "../index"
+import $ from 'jquery'
+
 class SearchBar extends React.Component{
+  // const $ = require('jquery');
   constructor(props){
     super(props);
-    this.state = {
-      data: []
-    }
     this.handleOnChange = this.handleOnChange.bind(this);
   }
+  componentDidMount(){
+   //You can Implement Jquery here
+  }
   handleOnChange = (value) =>{
-   this.setState({data: value})
-   store.dispatch({type:"CLICKED OPTION DATA",data:value})
+   store.dispatch({type:"CLICKED OPTION DATA",data:value});
   }
   render(){
     const getOptions = (input) =>{
@@ -44,8 +46,9 @@ class SearchBar extends React.Component{
     return(
       <div className="search-container">
         <p className="searchbar-heading">Find your favourite dish from one Website...</p>
-        <p className="allmeno-color"> Note:You can Enter Multiple Entries...</p>
-            <div className="col-md-6 offset-md-3">
+        <p className="allmeno-color" style={{fontSize:"18px"}}><blink>Note:You can Enter Multiple Entries...</blink></p>
+            <div className="col-md-6 offset-md-3 target">
+
               <AsyncSelect
                 components={{DropdownIndicator}}
                 isMulti={true}
@@ -56,6 +59,7 @@ class SearchBar extends React.Component{
                   this.handleOnChange(value);
                 }}
               />
+
             </div>
       </div>
 

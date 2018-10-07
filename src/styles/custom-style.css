@@ -60,3 +60,17 @@ div .allmeno-color
 {
   background-color: #fed136;
 }
+blink {
+  animation: blinker 0.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+  80%{
+    color: white;
+  }
+  100%{
+    color:black
+  }
+}

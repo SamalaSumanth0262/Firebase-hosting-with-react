@@ -5,10 +5,13 @@ class TableSection extends React.Component{
   constructor(props){
     super(props);
   }
+  handleQuantityChange = (event) =>{
+    debugger;
+  }
   render(){
     return(
       <table className="table table-hover">
-        <thead className="table-head">
+        <thead className="table-head" id="table-head">
         <tr>
           <th scope="col">S.no</th>
           <th scope="col">Hotel Name</th>
@@ -23,10 +26,10 @@ class TableSection extends React.Component{
           return(
             <tr key={key}>
               <td>{key+1}</td>
-              <td>{item.hotel_name}</td>
-              <td>{item.label}</td>
+              <td style={{textTransform:"capitalize"}}>{item.hotel_name}</td>
+              <td style={{textTransform:"capitalize"}}>{item.label}</td>
               <td>{item.price}</td>
-              <td><input type="number" /></td>
+              <td><input type="number"/></td>
               <td>0</td>
             </tr>
           )
