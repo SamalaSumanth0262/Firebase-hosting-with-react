@@ -1,4 +1,4 @@
-# Topics Covered
+# Tech Used
 
 #### React-select
 #### axios to get response
