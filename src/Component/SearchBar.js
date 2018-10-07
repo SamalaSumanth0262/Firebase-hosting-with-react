@@ -46,7 +46,6 @@ class SearchBar extends React.Component{
         <p className="searchbar-heading">Find your favourite dish from one Website...</p>
         <p className="allmeno-color" style={{fontSize:"18px"}}><blink>Note:You can Enter Multiple Entries...</blink></p>
             <div className="col-md-6 offset-md-3 target">
-
               <AsyncSelect
                 components={{DropdownIndicator}}
                 isMulti={true}
@@ -57,10 +56,8 @@ class SearchBar extends React.Component{
                   this.handleOnChange(value);
                 }}
               />
-
             </div>
       </div>
-
     );
   }
 }

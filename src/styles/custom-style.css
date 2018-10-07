@@ -85,6 +85,8 @@ blink {
   color:#fed136;
   background-color: black;
   line-height:40px;
+  cursor: pointer;
+
 }
 .promotion-banner-text {
   animation: blinker2 1.5s linear infinite;
@@ -105,4 +107,11 @@ blink {
     color: #fed136;
     font-size: 19px;
   }
+}
+.form-control:hover{
+  cursor: pointer;
+}
+.addmenu{
+  background-color: #FAD34F;
+  color: black;
 }

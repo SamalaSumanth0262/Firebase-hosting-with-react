@@ -7,6 +7,7 @@ class StickyNavBar extends React.Component{
   }
   render(){
     return(
+      <a href="/AddMenu" target='_blank'>
       <div className="form-control" style={{border:"2px solid white",backgroundColor:"#fed136"}}>
         <div className="row">
           <div className="col-md-12">
@@ -17,12 +18,11 @@ class StickyNavBar extends React.Component{
             </div>
           </div>
         </div>
-
       </div>
+      </a>
     );
   }
 }
-
 
 
 export default StickyNavBar;
