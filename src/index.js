@@ -6,14 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
 import { Provider } from 'react-redux'
 const initialState = {
-  number: 0
+  tableData: []
 }
 function reducer(state = initialState,action){
  switch(action.type){
-   case "INCREMENT":{
-     return{
-       number:state.number+1
-     }
+   case "CLICKED OPTION DATA":{
+     return Object.assign({},state,{tableData: action.data});
    }
    default:
      return state

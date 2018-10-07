@@ -14,14 +14,10 @@ class SearchBar extends React.Component{
   }
   handleOnChange = (value) =>{
    this.setState({data: value})
-    console.log("the data is",this.state.data);
-  }
-  handlechutiya = () => {
-    store.dispatch({type: "INCREMENT"})
+   store.dispatch({type:"CLICKED OPTION DATA",data:value})
   }
   render(){
     const getOptions = (input) =>{
-      // console.log("input:"+input);
       return axios.get(`/allmeno.json`)
         .then(response => {
           var options = response.data.map((item)=>{
@@ -33,11 +29,8 @@ class SearchBar extends React.Component{
               type: item.type
             }
           });
-          // console.log(options);
           var regxinput = new RegExp(input,'i');
-          // console.log(regxinput);
           var filtered_data = options.filter((item) => item.label.match(regxinput));
-          console.log(filtered_data,":Filtered_data");
           return filtered_data;
         })
     };
@@ -48,7 +41,6 @@ class SearchBar extends React.Component{
         </components.DropdownIndicator>
       );
     };
-
     return(
       <div className="search-container">
         <p className="searchbar-heading">Find your favourite dish from one Website...</p>
@@ -65,7 +57,6 @@ class SearchBar extends React.Component{
                 }}
               />
             </div>
-        <button onClick={this.handlechutiya}>sumanth please click here.</button>
       </div>
 
     );
