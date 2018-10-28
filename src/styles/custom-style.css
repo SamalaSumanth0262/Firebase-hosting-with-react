@@ -7,16 +7,17 @@
 }
 body{
   background-color: #fed136;
+  font-family: "Source Code Pro", Monaco, monospace;
 }
 .searchbar-heading
 {
   color:#fed136;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Source Code Pro", Monaco, monospace;
   font-size: 2rem;
 }
 .searchbar-subheading{
   font-style: italic;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Source Code Pro", Monaco, monospace;
   color:#fed136;
 }
 .allmeno-button
@@ -26,6 +27,8 @@ body{
 div .allmeno-color
 {
   color: #fed136;
+  font-family: "Source Code Pro", Monaco, monospace;
+
 }
 .allmeno-color:hover
 {

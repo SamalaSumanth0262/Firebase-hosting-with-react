@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div>
          <Route exact={true} path={'/'} component={AllComponent} />
-        <Route path={'/addmenu'} component={AddMenu} />
+         <Route path={'/addmenu'} component={AddMenu} />
       </div>
     );
   }
